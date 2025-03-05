@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Menu</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        .menu-container {
+            display: flex;
+            gap: 20px; /* Öğeler arası boşluk bırakır */
+            justify-content: center; /* Ortalar */
+        }
+        .menu-item {
+            text-align: center; /* Metni ve resmi hizalar */
+            text-decoration: none; /* Link altı çizgisini kaldırır */
+            color: black; /* Link rengini korur */
+        }
+        .menu-item img {
+            width: 200px;  /* Tüm resimler aynı genişlikte */
+            height: 150px; /* Tüm resimler aynı yükseklikte */
+            object-fit: cover; /* Görsellerin bozulmasını önler */
+            border-radius: 10px; /* Köşeleri yuvarlatır (isteğe bağlı) */
+        }
+    </style>
+
+</head>
+<body>
+
+    
+    <div class="menu-container"> <h2>Menü</h2> </div>
+    
+
+    
+    <div class="menu-container">
+        <a href="anayemek.html" class="menu-item">
+            <img src="../resimler/anayemek.jpg" title="Ana Yemek">
+            <h4>Ana Yemek</h4>
+        </a>
+        
+        <a href="corbalar.html" class="menu-item">
+            <img src="../resimler/corba.jpg" title="Çorba Menü">
+            <h4>Çorba Menü</h4>
+        </a>
+
+        <a href="tatlı.html" class="menu-item">
+            <img src="../resimler/tatli.jpg" title="Tatlı Menü">
+            <h4>Tatlı Menü</h4>
+        </a>
+        <a href="icecek.html" class="menu-item">
+            <img src="../resimler/içecekler.jpg" title="İçecekler">
+            <h4>İçecekler</h4>
+        </a>
+    </div>
+</body>
+</html>
