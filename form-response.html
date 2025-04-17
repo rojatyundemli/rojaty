@@ -11,7 +11,7 @@
             const urlParams = new URLSearchParams(window.location.search);
             
             // Form verilerini alıp sayfaya yazdırma
-            document.getElementById("nameValue").textContent = urlParams.get("name") || "Belirtilmedi";
+            document.getElementById("nameValue").textContent = urlParams.get("name") || "Belirtilmedi";  //değer varsa al yoksa Belirtilmedi diye yazdır
             document.getElementById("emailValue").textContent = urlParams.get("email") || "Belirtilmedi";
             document.getElementById("phoneValue").textContent = urlParams.get("phone") || "Belirtilmedi";
             document.getElementById("destinationValue").textContent = urlParams.get("destination") || "Belirtilmedi";
@@ -19,9 +19,10 @@
             
             // Aktiviteler birden fazla seçilebilir, dizi halinde gelir
             const activities = urlParams.getAll("activities");
-            document.getElementById("activitiesValue").textContent = activities.length > 0 ? activities.join(", ") : "Belirtilmedi";
             
-            document.getElementById("messageValue").textContent = urlParams.get("message") || "Belirtilmedi";
+            document.getElementById("activitiesValue").textContent = activities.length > 0 ? activities.join(", ") : "Belirtilmedi"; // Dizi boş değilse virgülle ayırarak yaz, boşsa "Belirtilmedi"
+            
+            document.getElementById("messageValue").textContent = urlParams.get("message") || "Belirtilmedi";   // Mesaj verisi
         };
     </script>
 </head>
@@ -42,7 +43,7 @@
             <h2>Form Başarıyla Gönderildi</h2>
             <p>Aşağıdaki bilgilerle başvurunuz alınmıştır. En kısa sürede sizinle iletişime geçeceğiz.</p>
             
-            <div class="response-data">
+            <div class="response-data">  <!-- Kullanıcının girdiği bilgileri gösteren tablo -->
                 <table class="response-table">
                     <tr>
                         <th>Ad Soyad:</th>
