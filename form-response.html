@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Gönderildi - Web Tasarım Ödevi</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.onload = function() {
+            // URL'den parametreleri alma
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            // Form verilerini alıp sayfaya yazdırma
+            document.getElementById("nameValue").textContent = urlParams.get("name") || "Belirtilmedi";  //değer varsa al yoksa Belirtilmedi diye yazdır
+            document.getElementById("emailValue").textContent = urlParams.get("email") || "Belirtilmedi";
+            document.getElementById("phoneValue").textContent = urlParams.get("phone") || "Belirtilmedi";
+            document.getElementById("destinationValue").textContent = urlParams.get("destination") || "Belirtilmedi";
+            document.getElementById("travelTypeValue").textContent = urlParams.get("travel_type") || "Belirtilmedi";
+            
+            // Aktiviteler birden fazla seçilebilir, dizi halinde gelir
+            const activities = urlParams.getAll("activities");
+            
+            document.getElementById("activitiesValue").textContent = activities.length > 0 ? activities.join(", ") : "Belirtilmedi"; // Dizi boş değilse virgülle ayırarak yaz, boşsa "Belirtilmedi"
+            
+            document.getElementById("messageValue").textContent = urlParams.get("message") || "Belirtilmedi";   // Mesaj verisi
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Akaytay Turizm AŞ</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="destinations.html">Rotalar</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-response">
+            <h2>Form Başarıyla Gönderildi</h2>
+            <p>Aşağıdaki bilgilerle başvurunuz alınmıştır. En kısa sürede sizinle iletişime geçeceğiz.</p>
+            
+            <div class="response-data">  <!-- Kullanıcının girdiği bilgileri gösteren tablo -->
+                <table class="response-table">
+                    <tr>
+                        <th>Ad Soyad:</th>
+                        <td id="nameValue"></td>
+                    </tr>
+                    <tr>
+                        <th>E-posta:</th>
+                        <td id="emailValue"></td>
+                    </tr>
+                    <tr>
+                        <th>Telefon:</th>
+                        <td id="phoneValue"></td>
+                    </tr>
+                    <tr>
+                        <th>Rota:</th>
+                        <td id="destinationValue"></td>
+                    </tr>
+                    <tr>
+                        <th>Seyahat Türü:</th>
+                        <td id="travelTypeValue"></td>
+                    </tr>
+                    <tr>
+                        <th>Aktiviteler:</th>
+                        <td id="activitiesValue"></td>
+                    </tr>
+                    <tr>
+                        <th>Mesaj:</th>
+                        <td id="messageValue"></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="back-link">
+                <a href="contact.html">İletişim Formuna Geri Dön</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Web Tasarım Ödevi. Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>
