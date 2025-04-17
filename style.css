@@ -1,0 +1,282 @@
+/* Temel stil ayarları */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+.logo{
+    color: #f2f2f2;
+    background-color: #3498db;
+    padding: 2px 6px;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+/* Ana sayfa stilleri */
+.intro {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.map-container {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.turkey-map {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Şehir bilgisi stilleri */
+.city-info {
+    background-color: white;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.city-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.city-image {
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.city-details {
+    flex: 1;
+    min-width: 300px;
+}
+
+.city-details p {
+    margin-bottom: 10px;
+}
+
+.city-details ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+/* Tablo stilleri */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+caption {
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+thead {
+    background-color: #3498db;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #e2f1ff;
+}
+
+tfoot {
+    font-style: italic;
+    background-color: #f8f8f8;
+}
+
+/* Form stilleri */
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.radio-group label, .checkbox-group label {
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button[type="reset"] {
+    background-color: #95a5a6;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Form cevap sayfası stilleri */
+.form-response {
+    text-align: center;
+}
+
+.response-data {
+    margin: 30px 0;
+}
+
+.response-table {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.response-table th {
+    width: 30%;
+    text-align: right;
+}
+
+.back-link {
+    margin-top: 20px;
+}
+
+.back-link a {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.back-link a:hover {
+    opacity: 0.9;
+}
+
+/* Footer stilleri */
+footer {
+    text-align: center;
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+/* Duyarlı tasarım */
+@media (max-width: 768px) {
+    .city-card {
+        flex-direction: column;
+    }
+    
+    .city-image {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
