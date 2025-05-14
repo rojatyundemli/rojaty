@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akaytay Otel - Odalarımız</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .rooms-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .room-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .room-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .room-content {
+            padding: 20px;
+        }
+
+        .room-title {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .room-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-item i {
+            color: #007bff;
+        }
+
+        .room-price {
+            font-size: 1.5em;
+            color: #007bff;
+            margin: 20px 0;
+        }
+
+        .book-now-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .book-now-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .room-description {
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        .amenities-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .amenity-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .amenity-item i {
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Akaytay Otel</h1>
+            <p>Eşsiz Deneyim, Unutulmaz Anılar</p>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Ana Sayfa</a>
+        <a href="rezervasyon.html"><i class="fas fa-calendar-check"></i> Rezervasyon</a>
+        <a href="odalar.html" class="active"><i class="fas fa-bed"></i> Odalar</a>
+        <a href="hakkimizda.html"><i class="fas fa-info-circle"></i> Hakkımızda</a>
+        <a href="iletisim.html"><i class="fas fa-envelope"></i> İletişim</a>
+        <a href="galeri.html"><i class="fas fa-images"></i> Galeri</a>
+        <a href="hizmetler.html"><i class="fas fa-concierge-bell"></i> Hizmetler</a>
+        <a href="fiyatlar.html"><i class="fas fa-tags"></i> Fiyatlar</a>
+        <a href="yorumlar.html"><i class="fas fa-comments"></i> Yorumlar</a>
+        <a href="tasKagitMakas.html"><i class="fas fa-gamepad"></i> Taş-Kağıt-Makas</a>
+    </nav>
+    <div class="container">
+        <h2>Odalarımız</h2>
+        <div class="rooms-container">
+            <!-- Standart Oda -->
+            <div class="room-card">
+                <img src="img/standartoda.jpg" alt="Standart Oda" class="room-image">
+                <div class="room-content">
+                    <h3 class="room-title">Standart Oda</h3>
+                    <div class="room-features">
+                        <div class="feature-item">
+                            <i class="fas fa-bed"></i>
+                            <span>1 Yatak Odası</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-bath"></i>
+                            <span>1 Banyo</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-user"></i>
+                            <span>2 Kişilik</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-ruler-combined"></i>
+                            <span>35 m²</span>
+                        </div>
+                    </div>
+                    <p class="room-description">
+                        Modern ve şık tasarıma sahip standart odalarımız, konforlu bir konaklama için ihtiyacınız olan her şeyi sunar. 
+                        Deniz manzaralı odalarımızda güneşin doğuşunu izleyebilir, günün yorgunluğunu atabilirsiniz.
+                    </p>
+                    <div class="amenities-list">
+                        <div class="amenity-item">
+                            <i class="fas fa-wifi"></i>
+                            <span>Ücretsiz Wi-Fi</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-tv"></i>
+                            <span>Smart TV</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-snowflake"></i>
+                            <span>Klima</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-coffee"></i>
+                            <span>Mini Bar</span>
+                        </div>
+                    </div>
+                    <p class="room-price">₺1,500 / gece</p>
+                    <a href="rezervasyon.html" class="book-now-btn">Hemen Rezervasyon Yap</a>
+                </div>
+            </div>
+
+            <!-- Deluxe Oda -->
+            <div class="room-card">
+                <img src="img/deluxoda.jpg" alt="Deluxe Oda" class="room-image">
+                <div class="room-content">
+                    <h3 class="room-title">Deluxe Oda</h3>
+                    <div class="room-features">
+                        <div class="feature-item">
+                            <i class="fas fa-bed"></i>
+                            <span>1 Yatak Odası</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-bath"></i>
+                            <span>1 Banyo</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-user"></i>
+                            <span>2 Kişilik</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-ruler-combined"></i>
+                            <span>45 m²</span>
+                        </div>
+                    </div>
+                    <p class="room-description">
+                        Geniş ve ferah deluxe odalarımız, özel balkonu ve lüks iç mekan tasarımıyla unutulmaz bir konaklama deneyimi sunar. 
+                        Deniz manzaralı balkonunuzda kahvenizi yudumlarken gün batımını izleyebilirsiniz.
+                    </p>
+                    <div class="amenities-list">
+                        <div class="amenity-item">
+                            <i class="fas fa-wifi"></i>
+                            <span>Ücretsiz Wi-Fi</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-tv"></i>
+                            <span>Smart TV</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-snowflake"></i>
+                            <span>Klima</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-coffee"></i>
+                            <span>Mini Bar</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-door-open"></i>
+                            <span>Özel Balkon</span>
+                        </div>
+                    </div>
+                    <p class="room-price">₺2,000 / gece</p>
+                    <a href="rezervasyon.html" class="book-now-btn">Hemen Rezervasyon Yap</a>
+                </div>
+            </div>
+
+            <!-- Suit Oda -->
+            <div class="room-card">
+                <img src="img/suitoda.jpg" alt="Suit Oda" class="room-image">
+                <div class="room-content">
+                    <h3 class="room-title">Suit Oda</h3>
+                    <div class="room-features">
+                        <div class="feature-item">
+                            <i class="fas fa-bed"></i>
+                            <span>2 Yatak Odası</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-bath"></i>
+                            <span>2 Banyo</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-user"></i>
+                            <span>4 Kişilik</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-ruler-combined"></i>
+                            <span>75 m²</span>
+                        </div>
+                    </div>
+                    <p class="room-description">
+                        Lüks ve geniş suit odalarımız, aileler ve gruplar için ideal bir seçimdir. İki yatak odası, 
+                        tam donanımlı mutfak ve özel oturma alanı ile ev konforunda bir konaklama deneyimi sunar.
+                    </p>
+                    <div class="amenities-list">
+                        <div class="amenity-item">
+                            <i class="fas fa-wifi"></i>
+                            <span>Ücretsiz Wi-Fi</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-tv"></i>
+                            <span>Smart TV</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-snowflake"></i>
+                            <span>Klima</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-coffee"></i>
+                            <span>Mini Bar</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-door-open"></i>
+                            <span>Özel Balkon</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-hot-tub"></i>
+                            <span>Jakuzi</span>
+                        </div>
+                    </div>
+                    <p class="room-price">₺3,000 / gece</p>
+                    <a href="rezervasyon.html" class="book-now-btn">Hemen Rezervasyon Yap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>İletişim</h3>
+                <p><i class="fas fa-phone"></i> +90 5377642467</p>
+                <p><i class="fas fa-envelope"></i> info@akaytayotel.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Ayazlı Mah. Ereğli Cad, Kültür Sk., 81650 Akçakoca/Düzce</p>
+            </div>
+            <div class="footer-section">
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Akaytay Otel - Tüm Hakları Saklıdır</p>
+        </div>
+    </footer>
+</body>
+</html>

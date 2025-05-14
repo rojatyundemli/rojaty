@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akaytay Otel - Hizmetler</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .service-category {
+            margin-bottom: 50px;
+        }
+
+        .service-category h2 {
+            color: #007bff;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 20px;
+        }
+
+        .service-content h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .service-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .service-features li {
+            padding: 8px 0;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+
+        .service-features li i {
+            color: #007bff;
+            margin-right: 10px;
+        }
+
+        .service-price {
+            font-weight: bold;
+            color: #007bff;
+            margin-top: 15px;
+            font-size: 1.2em;
+        }
+
+        .service-cta {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background 0.3s ease;
+        }
+
+        .service-cta:hover {
+            background: #0056b3;
+        }
+
+        .service-hours {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .service-hours h4 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .service-hours p {
+            margin: 5px 0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Akaytay Otel</h1>
+            <p>Eşsiz Deneyim, Unutulmaz Anılar</p>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Ana Sayfa</a>
+        <a href="rezervasyon.html"><i class="fas fa-calendar-check"></i> Rezervasyon</a>
+        <a href="odalar.html"><i class="fas fa-bed"></i> Odalar</a>
+        <a href="hakkimizda.html"><i class="fas fa-info-circle"></i> Hakkımızda</a>
+        <a href="iletisim.html"><i class="fas fa-envelope"></i> İletişim</a>
+        <a href="galeri.html"><i class="fas fa-images"></i> Galeri</a>
+        <a href="hizmetler.html" class="active"><i class="fas fa-concierge-bell"></i> Hizmetler</a>
+        <a href="fiyatlar.html"><i class="fas fa-tags"></i> Fiyatlar</a>
+        <a href="yorumlar.html"><i class="fas fa-comments"></i> Yorumlar</a>
+        <a href="tasKagitMakas.html"><i class="fas fa-gamepad"></i> Taş-Kağıt-Makas</a>
+    </nav>
+    <div class="container">
+        <div class="services-container">
+            <!-- Restoran ve Bar Hizmetleri -->
+            <div class="service-category">
+                <h2>Restoran ve Bar Hizmetleri</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <img src="img/otelrestoran.jpg" alt="Ana Restoran" class="service-image">
+                        <div class="service-content">
+                            <h3>Ana Restoran</h3>
+                            <p>Dünya mutfağından seçkin lezzetler sunan ana restoranımızda unutulmaz bir yemek deneyimi yaşayın.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> A la carte menü</li>
+                                <li><i class="fas fa-check"></i> Özel şef menüsü</li>
+                                <li><i class="fas fa-check"></i> Vejetaryen seçenekler</li>
+                                <li><i class="fas fa-check"></i> Şarap eşleştirme</li>
+                            </ul>
+                            <div class="service-hours">
+                                <h4>Çalışma Saatleri</h4>
+                                <p>Kahvaltı: 07:00 - 10:30</p>
+                                <p>Öğle: 12:00 - 15:00</p>
+                                <p>Akşam: 19:00 - 23:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <img src="img/otelbar.jpg" alt="Bar" class="service-image">
+                        <div class="service-content">
+                            <h3>Bar</h3>
+                            <p>Özel kokteyller ve dünya çapında içecekler sunan barımızda keyifli anlar geçirin.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Özel kokteyller</li>
+                                <li><i class="fas fa-check"></i> Canlı müzik</li>
+                                <li><i class="fas fa-check"></i> Şarap çeşitleri</li>
+                                <li><i class="fas fa-check"></i> Atıştırmalıklar</li>
+                            </ul>
+                            <div class="service-hours">
+                                <h4>Çalışma Saatleri</h4>
+                                <p>Her gün: 16:00 - 02:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spa & Wellness -->
+            <div class="service-category">
+                <h2>Spa & Wellness</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <img src="img/otelspa.jpg" alt="Spa Merkezi" class="service-image">
+                        <div class="service-content">
+                            <h3>Spa Merkezi</h3>
+                            <p>Profesyonel ekibimizle size özel bakım ve masaj hizmetleri sunuyoruz.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Masaj terapileri</li>
+                                <li><i class="fas fa-check"></i> Cilt bakımları</li>
+                                <li><i class="fas fa-check"></i> Saç bakımı</li>
+                                <li><i class="fas fa-check"></i> Manikür & Pedikür</li>
+                            </ul>
+                            <div class="service-price">
+                                Masaj: 500 TL'den başlayan fiyatlarla
+                            </div>
+                            <a href="rezervasyon.html" class="service-cta">Randevu Al</a>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <img src="img/otelsauna.jpg" alt="Sauna" class="service-image">
+                        <div class="service-content">
+                            <h3>Sauna & Hamam</h3>
+                            <p>Geleneksel Fin saunası ve Türk hamamı ile kendinizi yenileyin.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Fin saunası</li>
+                                <li><i class="fas fa-check"></i> Türk hamamı</li>
+                                <li><i class="fas fa-check"></i> Buz odası</li>
+                                <li><i class="fas fa-check"></i> Dinlenme alanı</li>
+                            </ul>
+                            <div class="service-hours">
+                                <h4>Çalışma Saatleri</h4>
+                                <p>Her gün: 10:00 - 22:00</p>
+                            </div>
+                            <div class="service-price">
+                                Günlük giriş: 300 TL
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Havuz & Fitness -->
+            <div class="service-category">
+                <h2>Havuz & Fitness</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <img src="img/otelhavuzacik.jpg" alt="Açık Havuz" class="service-image">
+                        <div class="service-content">
+                            <h3>Açık Havuz</h3>
+                            <p>Deniz manzaralı açık havuzumuzda yüzme keyfi yaşayın.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> 25m uzunluğunda havuz</li>
+                                <li><i class="fas fa-check"></i> Güneşlenme terası</li>
+                                <li><i class="fas fa-check"></i> Havuz barı</li>
+                                <li><i class="fas fa-check"></i> Duş ve soyunma odaları</li>
+                            </ul>
+                            <div class="service-hours">
+                                <h4>Çalışma Saatleri</h4>
+                                <p>Yaz sezonu: 08:00 - 20:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <img src="img/kapalıhavuz.jpg" alt="Kapalı Havuz" class="service-image">
+                        <div class="service-content">
+                            <h3>Kapalı Havuz & Fitness</h3>
+                            <p>Yıl boyu kullanılabilen ısıtmalı havuz ve modern fitness merkezi.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Isıtmalı kapalı havuz</li>
+                                <li><i class="fas fa-check"></i> Modern fitness ekipmanları</li>
+                                <li><i class="fas fa-check"></i> Grup dersleri</li>
+                                <li><i class="fas fa-check"></i> Özel eğitmenler</li>
+                            </ul>
+                            <div class="service-hours">
+                                <h4>Çalışma Saatleri</h4>
+                                <p>Her gün: 06:00 - 22:00</p>
+                            </div>
+                            <div class="service-price">
+                                Günlük giriş: 200 TL
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ek Hizmetler -->
+            <div class="service-category">
+                <h2>Ek Hizmetler</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <img src="img/transfer.jpg" alt="Transfer Hizmeti" class="service-image">
+                        <div class="service-content">
+                            <h3>Transfer Hizmeti</h3>
+                            <p>Havaalanı ve şehir merkezi transfer hizmetlerimizle konforlu ulaşım.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Havaalanı transferi</li>
+                                <li><i class="fas fa-check"></i> Şehir merkezi transferi</li>
+                                <li><i class="fas fa-check"></i> VIP transfer</li>
+                                <li><i class="fas fa-check"></i> 7/24 hizmet</li>
+                            </ul>
+                            <div class="service-price">
+                                Havaalanı transferi: 500 TL
+                            </div>
+                            <a href="rezervasyon.html" class="service-cta">Transfer Rezervasyonu</a>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <img src="img/etkinlik.jpg" alt="Etkinlik Organizasyonu" class="service-image">
+                        <div class="service-content">
+                            <h3>Etkinlik Organizasyonu</h3>
+                            <p>Toplantı, düğün ve özel etkinlikleriniz için profesyonel organizasyon hizmeti.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Toplantı salonları</li>
+                                <li><i class="fas fa-check"></i> Düğün organizasyonu</li>
+                                <li><i class="fas fa-check"></i> Özel kutlamalar</li>
+                                <li><i class="fas fa-check"></i> Catering hizmeti</li>
+                            </ul>
+                            <a href="iletisim.html" class="service-cta">Detaylı Bilgi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>İletişim</h3>
+                <p><i class="fas fa-phone"></i> +90 5377642467</p>
+                <p><i class="fas fa-envelope"></i> info@akaytayotel.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Ayazlı Mah. Ereğli Cad, Kültür Sk., 81650 Akçakoca/Düzce</p>
+            </div>
+            <div class="footer-section">
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Akaytay Otel - Tüm Hakları Saklıdır</p>
+        </div>
+    </footer>
+</body>
+</html>

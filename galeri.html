@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akaytay Otel - Galeri</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f0f7ff;
+            color: #007bff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #007bff;
+            color: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            aspect-ratio: 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            padding: 20px;
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-item-overlay {
+            transform: translateY(0);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+        }
+
+        .lightbox-content {
+            position: relative;
+            width: 90%;
+            max-width: 1000px;
+            margin: 50px auto;
+        }
+
+        .lightbox-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .lightbox-nav button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .lightbox-caption {
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Akaytay Otel</h1>
+            <p>Eşsiz Deneyim, Unutulmaz Anılar</p>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Ana Sayfa</a>
+        <a href="rezervasyon.html"><i class="fas fa-calendar-check"></i> Rezervasyon</a>
+        <a href="odalar.html"><i class="fas fa-bed"></i> Odalar</a>
+        <a href="hakkimizda.html"><i class="fas fa-info-circle"></i> Hakkımızda</a>
+        <a href="iletisim.html"><i class="fas fa-envelope"></i> İletişim</a>
+        <a href="galeri.html" class="active"><i class="fas fa-images"></i> Galeri</a>
+        <a href="hizmetler.html"><i class="fas fa-concierge-bell"></i> Hizmetler</a>
+        <a href="fiyatlar.html"><i class="fas fa-tags"></i> Fiyatlar</a>
+        <a href="yorumlar.html"><i class="fas fa-comments"></i> Yorumlar</a>
+        <a href="tasKagitMakas.html"><i class="fas fa-gamepad"></i> Taş-Kağıt-Makas</a>
+    </nav>
+    <div class="container">
+        <div class="gallery-container">
+            <h2>Galeri</h2>
+           
+
+            <div class="gallery-grid">
+                <!-- Odalar -->
+                <div class="gallery-item" data-category="odalar">
+                    <img src="img/standartoda.jpg" alt="Standart Oda">
+                    <div class="gallery-item-overlay">
+                        <h3>Standart Oda</h3>
+                        <p>Modern ve şık tasarıma sahip standart odamız</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="odalar">
+                    <img src="img/deluxoda.jpg" alt="Deluxe Oda">
+                    <div class="gallery-item-overlay">
+                        <h3>Deluxe Oda</h3>
+                        <p>Deniz manzaralı deluxe odamız</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="odalar">
+                    <img src="img/suitoda.jpg" alt="Suit Oda">
+                    <div class="gallery-item-overlay">
+                        <h3>Suit Oda</h3>
+                        <p>Lüks suit odamız</p>
+                    </div>
+                </div>
+
+                <!-- Restoran -->
+                <div class="gallery-item" data-category="restoran">
+                    <img src="img/otelrestoran.jpg" alt="Ana Restoran">
+                    <div class="gallery-item-overlay">
+                        <h3>Ana Restoran</h3>
+                        <p>Dünya mutfağından seçkin lezzetler</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="restoran">
+                    <img src="img/otelbar.jpg" alt="Bar">
+                    <div class="gallery-item-overlay">
+                        <h3>Bar</h3>
+                        <p>Özel kokteyller ve içecekler</p>
+                    </div>
+                </div>
+
+                <!-- Spa & Wellness -->
+                <div class="gallery-item" data-category="spa">
+                    <img src="img/otelspa.jpg" alt="Spa Merkezi">
+                    <div class="gallery-item-overlay">
+                        <h3>Spa Merkezi</h3>
+                        <p>Profesyonel masaj ve bakım hizmetleri</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="spa">
+                    <img src="img/otelsauna.jpg" alt="Sauna">
+                    <div class="gallery-item-overlay">
+                        <h3>Sauna</h3>
+                        <p>Geleneksel Fin saunası</p>
+                    </div>
+                </div>
+
+                <!-- Havuz -->
+                <div class="gallery-item" data-category="havuz">
+                    <img src="img/otelhavuzacik.jpg" alt="Açık Havuz">
+                    <div class="gallery-item-overlay">
+                        <h3>Açık Havuz</h3>
+                        <p>Deniz manzaralı açık havuzumuz</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="havuz">
+                    <img src="img/kapalıhavuz.jpg" alt="Kapalı Havuz">
+                    <div class="gallery-item-overlay">
+                        <h3>Kapalı Havuz</h3>
+                        <p>Yıl boyu kullanılabilen ısıtmalı havuz</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img src="" alt="">
+            <div class="lightbox-nav">
+                <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>İletişim</h3>
+                <p><i class="fas fa-phone"></i> +90 5377642467</p>
+                <p><i class="fas fa-envelope"></i> info@akaytayotel.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Ayazlı Mah. Ereğli Cad, Kültür Sk., 81650 Akçakoca/Düzce</p>
+            </div>
+            <div class="footer-section">
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Akaytay Otel - Tüm Hakları Saklıdır</p>
+        </div>
+    </footer>
+
+   
+</body>
+</html>
