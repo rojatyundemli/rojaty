@@ -18,3 +18,10 @@ function tasKagitMakas(secim) {
 
     document.getElementById("sonuc").innerHTML = "Bilgisayar: " + bilgisayar + "<br>" + sonuc;
 }
+
+
+
+document.getElementById('reservationForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    window.location.href = 'rezervasyon-basarili.html';
+}); 
