@@ -32,9 +32,87 @@
             <div class="success-message">
                 <h2>Rezervasyonunuz Başarıyla Alındı!</h2>
                 <p>Rezervasyon detaylarınız e-posta adresinize gönderilmiştir.</p>
-                <p>En kısa sürede sizinle iletişime geçeceğiz.</p>
             </div>
-            <a href="index.html" class="back-button">Ana Sayfaya Dön</a>
+
+            <div class="reservation-details">
+                <div class="reservation-header">
+                    <h3>Rezervasyon Detayları</h3>
+                    <div class="reservation-number">
+                        <span>Rezervasyon No:</span>
+                        <strong id="reservationNumber"></strong>
+                    </div>
+                </div>
+
+                <div class="reservation-info">
+                    <div class="info-row">
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <label>Misafir</label>
+                                <p id="guestName"></p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <label>E-posta</label>
+                                <p id="guestEmail"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <label>Telefon</label>
+                                <p id="guestPhone"></p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <label>Kişi Sayısı</label>
+                                <p id="guestCount"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-item">
+                            <i class="fas fa-calendar-check"></i>
+                            <div>
+                                <label>Giriş Tarihi</label>
+                                <p id="checkInDate"></p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-calendar-times"></i>
+                            <div>
+                                <label>Çıkış Tarihi</label>
+                                <p id="checkOutDate"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <label>Rezervasyon Tarihi</label>
+                                <p id="reservationDate"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <a href="index.html" class="back-button">Ana Sayfaya Dön</a>
+                <button onclick="window.print()" class="print-button">
+                    <i class="fas fa-print"></i> Yazdır
+                </button>
+            </div>
         </div>
     </div>
 
@@ -51,5 +129,6 @@
             <p>&copy; 2024 Akaytay Otel - Tüm Hakları Saklıdır</p>
         </div>
     </footer>
+
 </body>
 </html> 
